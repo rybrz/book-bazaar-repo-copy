@@ -1,0 +1,109 @@
+.app {
+  display: grid;
+  grid-template-rows: 1fr 10fr; /* Header takes 1/8 and Body takes 7/8 of the screen's height */
+  height: 100vh; /* Set the height of the app to full viewport height */
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-body {
+  display: grid;
+  grid-template-columns: 2fr 7fr; /* Sidebar takes 1/4 and Main Content takes 3/4 of the screen's width */
+  width: 100vw;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.main-content {
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 50%; /* Adjust width as needed */
+}
+
+.search-bar input[type='text'] {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Adjust hover and focus styles as needed */
+.search-bar button:hover,
+.search-bar button:focus {
+  background-color: #0056b3;
+}
+
+.post-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 80; /* Adjust width as needed */
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc; /* Gray color */
+  width: 100%; /* Full width */
+  margin: 15px auto; /* Center horizontally with 10px top and bottom margin */
+}
+
+.signup-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+.signup-button,
+.login-button {
+  margin: 5px 0px;
+}
+
+.signup-button .login-button {
+  cursor: pointer;
+}

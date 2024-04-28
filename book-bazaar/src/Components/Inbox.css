@@ -1,0 +1,103 @@
+/* Set up flexbox for the inbox container */
+.inbox-container {
+  height: 90vh; /* Set a fixed height for the inbox container */
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox-header {
+  font-size: bold;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Style for each inbox item */
+.inbox-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* Style for image container */
+.inbox-image-container {
+  flex: 0 0 10px; /* Adjust the width of the image container */
+  margin-right: 10px;
+}
+
+/* Style for text container */
+.inbox-text-container {
+  font-weight: bolder;
+  flex: 1;
+  margin-right: 10px;
+}
+.inbox-text-email-container {
+  font-weight: 400;
+  font-size: small;
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Style for button container */
+.inbox-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 100px; /* Adjust the width of the button container */
+}
+
+.inbox-image-container img {
+  max-width: 50px;
+}
+
+/* Style for square buttons */
+.inbox-button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Style for green button */
+.button-green {
+  background-color: green;
+}
+
+/* Style for red button */
+.button-red {
+  background-color: red;
+}
+
+.inbox-button:hover {
+  filter: brightness(
+    1.2
+  ); /* Increase brightness to make the color slightly lighter */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .inbox-item {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .inbox-image-container {
+    flex: 0 0 auto; /* Reset the flex value to allow natural sizing */
+    order: -1; /* Move image container to the top */
+    margin-bottom: 10px; /* Add some space between image and text */
+  }
+
+  .inbox-button-container {
+    display: flex;
+    flex-direction: row; /* Align buttons side by side */
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Add spacing between buttons */
+    padding-right: 20px; /* Add padding to the right side */
+  }
+}

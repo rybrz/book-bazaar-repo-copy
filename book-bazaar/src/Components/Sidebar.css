@@ -1,0 +1,98 @@
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+.post-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 80; /* Adjust width as needed */
+  cursor: pointer;
+}
+.divider {
+  height: 1px;
+  background-color: #ccc; /* Gray color */
+  width: 100%; /* Full width */
+  margin: 15px auto; /* Center horizontally with 10px top and bottom margin */
+}
+
+/* Pop up css */
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.popup h2 {
+  color: black; /* Change the color to your desired color */
+}
+
+.popup button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.post-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #0056b3;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-row input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.long-input,
+select {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.long-input {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+}

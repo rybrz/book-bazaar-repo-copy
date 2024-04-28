@@ -1,0 +1,119 @@
+/* .marketplace {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+} */
+
+.marketplace {
+  background-color: #d3d3d3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  overflow-y: auto;
+  height: 90vh;
+}
+
+.loading-animation {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;
+  display: block;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-weight: bold; /* Make text bold */
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tile {
+  width: 150px; /* Adjust the width as needed */
+  height: 220px; /* Adjust the height as needed */
+  background-color: #f0f0f0; /* Placeholder background color */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Adjust the margin as needed */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.tile:hover {
+  transform: scale(1.05); /* Scale up the tile on hover */
+}
+
+.image-container {
+  flex: 1; /* Take remaining space */
+  position: relative; /* Position overlay relative to image */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0; /* Fix overlay to the bottom */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.overlay .price {
+  color: white;
+  font-weight: bold;
+}
+
+.details {
+  padding: px;
+  color: #fff;
+}
+
+.details strong {
+  font-weight: bold;
+}
+
+.condition {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.new {
+  background-color: green;
+  color: white;
+}
+
+.used {
+  background-color: yellow;
+  color: black;
+}
+
+.poor {
+  background-color: red;
+  color: white;
+}

@@ -1,0 +1,29 @@
+.listing-page-body {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  width: 100vw;
+}
+
+/* Testing */
+
+.book-listing {
+  display: grid;
+  grid-template-columns: 100px auto; /* Adjust the width of thumbnail section */
+  gap: 10px; /* Adjust the gap between rows */
+}
+
+.book-info {
+  display: flex;
+  align-items: center;
+}
+
+.book-thumbnail {
+  width: 100px; /* Adjust the width of the thumbnail */
+  height: 100px; /* Adjust the height of the thumbnail */
+  object-fit: cover; /* Maintain aspect ratio */
+  margin-right: 10px; /* Adjust spacing between thumbnail and book info */
+}
+
+.book-title {
+  font-weight: bold;
+}
